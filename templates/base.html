@@ -68,54 +68,66 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <ul class="list-inline text-center">
+            {% if LINK_FACEBOOK %}
               <li class="list-inline-item">
-                <a href="{{ sociales.facebook }}">
+                <a href="{{LINK_FACEBOOK}}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
+              {% endif %}
+              {% if LINK_TWITTER %}
               <li class="list-inline-item">
-                <a href="{{ sociales.twitter }}">
+                <a href="{{LINK_TWITTER}}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
+              {% endif %}
+              {% if LINK_SPOTIFY %}
               <li class="list-inline-item">
-                <a href="{{ sociales.spotify }}">
+                <a href="{{LINK_SPOTIFY}}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-spotify fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
+              {% endif %}
+              {% if LINK_GOOGLE %}
               <li class="list-inline-item">
-                <a href="{{ sociales.google }}">
+                <a href="{{LINK_GOOGLE}}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-google fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
+              {% endif %}
+              {% if LINK_INSTAGRAM %}
               <li class="list-inline-item">
-                <a href="{{ sociales.instagram }}">
+                <a href="{{LINK_INSTAGRAM}}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
+              {% endif %}
+              {% if LINK_YOUTUBE %}
               <li class="list-inline-item">
-                <a href="{{ sociales.youtube }}">
+                <a href="{{LINK_YOUTUBE}}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
+              {% endif %}
             </ul>
             <p class="copyright text-muted">Copyright &copy; 2020 · Tiago y Fran </p>
           </div>

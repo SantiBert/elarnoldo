@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Portada{% endblock %}
+
+{% block background %}{% load static %}{% static 'img/1500x500.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1><font color="yellow">Arnoldo</font></h1>
+<span class="subheading"><font color="white">Capitulos de Oye Arnold</font></span>
+{% endblock %}
+{% block content %}
+<h1> Español </h1>
+
+
+
+<ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">    
+  
+  {%for season in seasons%}
+      <li><a href="{% url 'core:Capitulos' 'latino' season.name %}"> {{season.tag}}</a></li>
+  {%endfor%}
+              </ul>
+{% endblock %}

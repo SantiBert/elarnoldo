@@ -19,6 +19,9 @@
             <p>{{post.content|safe}}</p>
         </div>
     </div>
-    <div class="navigation-wrap justify-content-between d-flex">  
+    <div class="navigation-wrap justify-content-between d-flex">
+		<a class="prev" href="{% url 'core:capitulo' last.slug %}"><span class="lnr lnr-arrow-left"></span>Capitulo anterior</a>
+		<a class="next" href="{% url 'core:capitulo' second.slug %}">Siguiente capitilo<span class="lnr lnr-arrow-right"></span></a>
+	</div>
     
 {% endblock  %}

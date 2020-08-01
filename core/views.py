@@ -3,6 +3,7 @@ from django.views.generic import ListView, View, DetailView
 from .models import Season, Capitulo
 from .utils import generarTemporada, consulta, generarCapitulos, generarEspisodio
 from django.db.models import Q
+from next_prev import next_in_order, prev_in_order
 
 
 class Inicio(View):
@@ -46,7 +47,15 @@ class CapituloDetailView(DetailView):
         except:
             post = None
         #contexto = generarEspisodio(request)
-        contexto = {"post": post}
+        first = Capitulo.objects.first()
+        second = next_in_order(first)
+        prev_in_order(second) == first  # True
+        last = prev_in_order(first, loop=True)
+        contexto = {
+            "post": post,
+            'second': second,
+            'last': last,
+        }
         print(post)
         return render(request, 'capitulo.html', contexto)
 

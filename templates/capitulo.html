@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} {{ post.name }} {% endblock %}
+
+{% block background %}{% load static %}{% static 'img/1500x500.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1> {{ post.name }} </h1>
+<span class="subheading"> Temporada 1 </span>
+{% endblock %}
+
+{% block content  %}
+    
+    <div class="row project"> 
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid " src="{{ post.referential_image.url }}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">{{ post.name }}</h2>   
+            <p>{{post.content|safe}}</p>
+        </div>
+    </div>
+    <div class="navigation-wrap justify-content-between d-flex">  
+    
+{% endblock  %}

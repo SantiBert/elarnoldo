@@ -7,16 +7,14 @@
 {% block headers %}
 <h1><font color="efc70f">El Arnoldo</font></h1>
 <span class="subheading"><font color="white">Capitulos de Oye Arnold</font></span>
+<h4> Inglés </h4>
 {% endblock %}
 {% block content %}
-<h1> Inglés </h1>
-
-
-
-<ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">
 
   {%for season in seasons%}
+  <div class="entry2 col-lg-8 col-md-10" >
       <li><a href="{% url 'core:Capitulos' 'latino' season.name %}"> {{season.tag}}</a></li>
+</div>
   {%endfor%}
-              </ul>
+
 {% endblock %}

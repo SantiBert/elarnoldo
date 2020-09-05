@@ -5,7 +5,7 @@
 {% block background %}{% load static %}{% static 'img/1500x500.jpg' %}{% endblock %}
 
 {% block headers %}
-<h1><font color="yellow">Arnoldo</font></h1>
+<h1><font color="efc70f">El Arnoldo</font></h1>
 <span class="subheading"><font color="white">Capitulos de Oye Arnold</font></span>
 {% endblock %}
 {% block content %}
@@ -27,8 +27,9 @@
 
 
               {%for capitulo in capitulos%}
-              <div class="entry2 mb-5">                  
-                <h2><a href="{% url 'core:capitulo' capitulo.slug %}">{{ capitulo.number }} {{ capitulo.name }}</a></h2>
+              <div class="entry2 col-lg-8 col-md-10">
+                <h2><li><a href="{% url 'core:capitulo' capitulo.slug %}">{{ capitulo.number }} {{ capitulo.name }}</a></li></h2>
+                <br>
               </div>
               {%endfor%}
 

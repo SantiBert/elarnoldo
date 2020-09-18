@@ -2,15 +2,14 @@
 
 {% block title %}Portada{% endblock %}
 
-{% block background %}{% load static %}{% static 'img/1500x500.jpg' %}{% endblock %}
+{% block background %}{% load static %}{% static 'img/1500x500.png' %}{% endblock %}
 
 {% block headers %}
-<h1><font color="efc70f">El Arnoldo</font></h1>
-<span class="subheading"><font color="white">Capitulos de Oye Arnold</font></span>
+
 {% endblock %}
 {% block content %}
 
-        <!--<div class="row text-center pt-5 border-top">
+<!--<div class="row text-center pt-5 border-top">
           <div class="col-md-12">
             <div class="custom-pagination">
               Página {{ posts.number }} de {{ posts.paginator.num_pages }}
@@ -26,14 +25,12 @@
               {% endif %}-->
 
 
-              {%for capitulo in capitulos%}
-              <div class="entry2 col-lg-8 col-md-10">
-                <h2><li><a href="{% url 'core:capitulo' capitulo.slug %}">{{ capitulo.number }} {{ capitulo.name }}</a></li></h2>
-                <br>
-              </div>
-              {%endfor%}
-
-              {% endblock %}
-
-
-
+{%for capitulo in capitulos%}
+<div class="entry2 col-lg-8 col-md-10">
+  <h2>
+    <li><a href="{% url 'core:capitulo' capitulo.slug %}">{{ capitulo.number }} {{ capitulo.name }}</a></li>
+  </h2>
+  <br>
+</div>
+{%endfor%}
+{% endblock %}

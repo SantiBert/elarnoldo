@@ -2,19 +2,28 @@
 
 {% block title %}Portada{% endblock %}
 
-{% block background %}{% load static %}{% static 'img/1500x500.jpg' %}{% endblock %}
+{% block background %}{% load static %}{% static 'img/1500x500.png' %}{% endblock %}
 
 {% block headers %}
-<h1><font color="efc70f">El Arnoldo</font></h1>
-<span class="subheading"><font color="white">Capitulos de Oye Arnold</font></span>
-<h3> Español </h3>
+
 {% endblock %}
 {% block content %}
 
-  {%for season in seasons%}
-  <div class="entry2 col-lg-8 col-md-10" >
-      <li><a href="{% url 'core:Capitulos' 'latino' season.name %}"> {{season.tag}}</a></li>
+<div class="card-header card-header-image">
+  <p><img src="{% static 'img/temporadas.png' %}"></p>
+</div>
+<div class="col-md-7">
+  <div class="container">
+    <h1 style="text-underline-position: auto;font-family: century gothic;"> Español </h1>
+    <br>
+    {%for season in seasons%}
+    <div class="entry2 col-lg-8 col-md-10">
+      <h2>
+        <li><a href="{% url 'core:Capitulos' 'latino' season.name %}" style="font-family: century gothic;">
+            {{season.tag}}</a></li>
+      </h2>
     </div>
-  {%endfor%}
-
+    {%endfor%}
+  </div>
+</div>
 {% endblock %}
